@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/GabrielFerrariR/Hackton-Backend#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.2",
     "express-async-errors": "^3.1.1",
     "mongoose": "^6.7.0"
@@ -26,6 +27,8 @@
   "devDependencies": {
     "dotenv": "^16.0.3",
     "eslint": "^8.26.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
     "nodemon": "^2.0.20"
   }
 }
