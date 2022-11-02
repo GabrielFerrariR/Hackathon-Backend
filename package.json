@@ -4,7 +4,8 @@
   "description": "Backend criado para o 4to Programa de Formação FCamara",
   "main": "src/server.js",
   "scripts": {
-    "start": "npm run node .",
+    "start": "node .",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
