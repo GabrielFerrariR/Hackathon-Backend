@@ -10,17 +10,14 @@ class App {
     this.app = express();
 
     this.app.use(express.json());
-
     this.app.use(cors());
   }
 
-  start(port) {
-    const actualPort = process.env.PORT || port;
-
+  start(port = process.env.PORT) {
     connectToDatabase()
       .then(() => this.app.listen(
-        actualPort,
-        () => console.log(`Running on port: ${actualPort}`),
+        port,
+        () => console.log(`Running on port: ${port}`),
       ))
       .catch((error) => {
         console.log("Connection with database generated an error:\r\n");
