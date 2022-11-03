@@ -1,11 +1,37 @@
 const express = require("express");
 const cors = require("cors");
-const testRoute = require("./routes/index");
 
-const app = express();
+const connectToDatabase = require("./models/connection");
+const router = require("./routes/Router");
 
-app.use(express.json());
-app.use(cors());
-app.use(testRoute);
+class App {
+  constructor() {
+    this.app = express();
 
-module.exports = app;
+    this.app.use(express.json());
+
+    this.app.use(cors());
+  }
+
+  start(port) {
+    const actualPort = process.env.PORT || port;
+
+    connectToDatabase()
+      .then(() => this.app.listen(
+        actualPort,
+        () => console.log(`Running on port: ${actualPort}`),
+      ))
+      .catch((error) => {
+        console.log("Connection with database generated an error:\r\n");
+        console.error(error);
+        console.log("\r\nServer initialization cancelled");
+        process.exit(0);
+      });
+  }
+
+  addRouter() {
+    this.app.use(router);
+  }
+}
+
+module.exports = App;
