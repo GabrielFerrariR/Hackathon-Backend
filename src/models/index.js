@@ -1,4 +1,4 @@
-class Service {
+class Model {
   async create(obj) {
     return this.model.create({ ...obj });
   }
@@ -20,4 +20,4 @@ class Service {
   }
 }
 
-module.exports = Service;
+module.exports = Model;
