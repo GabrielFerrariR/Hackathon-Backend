@@ -7,8 +7,8 @@ class Service {
     return this.model.read();
   }
 
-  async readOne(id) {
-    return this.model.readOne(id);
+  async readById(id) {
+    return this.model.readById(id);
   }
 
   async update(id, data) {
