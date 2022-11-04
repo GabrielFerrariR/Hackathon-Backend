@@ -1,7 +1,7 @@
 const { Schema, model: createModel } = require("mongoose");
 const Model = require(".");
 
-const UserSchema = new Schema({
+const ContentSchema = new Schema({
   name: String,
   type: String,
   duration: String,
@@ -12,10 +12,15 @@ const UserSchema = new Schema({
   likes: Number,
 });
 
-class UserModel extends Model {
-  constructor(model = createModel("Users", UserSchema)) {
+class ContentModel extends Model {
+  constructor(model = createModel("Content", ContentSchema)) {
     super(model);
+    this.read = this.read.bind(this);
+  }
+
+  async read(params) {
+    return this.model.find(params);
   }
 }
 
-module.exports = UserModel;
+module.exports = ContentModel;
