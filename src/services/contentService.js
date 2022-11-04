@@ -1,38 +1,17 @@
-const { default: mongoose } = require("mongoose");
+const Service = require(".");
+const ContentModel = require("../models/ContentModel");
 
-class ContentService {
-  constructor(model) {
-    this.service = model;
+class ContentService extends Service {
+  constructor() {
+    super();
+    super.model = new ContentModel();
+    this.read = this.read.bind(this);
   }
 
-  async show(params) {
+  async read(params) {
     const { track, subtrack } = params;
-    if (!track || !subtrack) throw new Error("parametro ausente");
-    const result = await this.model.find({ track, subtrack });
-    return result;
-  }
-
-  async create(body) {
-    if (!body) throw new Error("parametro ausente");
-    const result = await this.model.create(body);
-    return result;
-  }
-
-  async edit(id, body) {
-    mongoose.isValidObjectId(id);
-    const result = await this.model.find(id, body);
-    return result;
-  }
-
-  async update(id, body) {
-    mongoose.isValidObjectId(id);
-    const result = await this.model.update(id, body);
-    return result;
-  }
-
-  async destroy(id) {
-    mongoose.isValidObjectId(id);
-    const result = await this.model.destroy(id);
+    // if (!track || !subtrack) throw new Error("parametro ausente");
+    const result = await this.model.read({ track, subtrack });
     return result;
   }
 }
