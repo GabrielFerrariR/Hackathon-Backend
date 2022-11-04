@@ -130,5 +130,4 @@ dist
 .pnp.*
 
 # Developer vscode configs
-
 .vscode
