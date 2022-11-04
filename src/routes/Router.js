@@ -4,10 +4,10 @@ class CustomRouter {
   constructor() {
     this.router = Router();
 
-    this.addRoute = this.addRoute.bind(this);
+    this.addController = this.addController.bind(this);
   }
 
-  addRoute(controller, route = controller.route) {
+  addController(controller, route = controller.route) {
     this.router.post(route, controller.create);
     this.router.get(route, controller.read);
     this.router.get(`${route}/:id`, controller.readOne);
