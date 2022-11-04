@@ -1,6 +1,10 @@
 class Model {
-  async create(obj) {
-    return this.model.create({ ...obj });
+  constructor(model) {
+    this.model = model;
+  }
+
+  async create(data) {
+    return this.model.create({ ...data });
   }
 
   async read() {
@@ -11,8 +15,8 @@ class Model {
     return this.model.findOne({ _id: id });
   }
 
-  async update(id, obj) {
-    return this.model.findOneAndUpdate({ _id: id }, { ...obj }, { new: true });
+  async update(id, data) {
+    return this.model.findOneAndUpdate({ _id: id }, { ...data }, { new: true });
   }
 
   async delete(id) {
