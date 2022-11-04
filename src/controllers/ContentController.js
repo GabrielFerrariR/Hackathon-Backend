@@ -1,6 +1,6 @@
 const { StatusCodes } = require("http-status-codes");
 const Controller = require(".");
-const ContentService = require("../services/contentService");
+const ContentService = require("../services/ContentService");
 
 class ContentController extends Controller {
   constructor() {
