@@ -5,6 +5,7 @@
   "main": "src/server.js",
   "scripts": {
     "start": "node .",
+    "seed": "node src/models/seeders/seeder.js",
     "dev": "nodemon .",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -31,6 +32,7 @@
     "eslint": "^8.26.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
+    "mongoose-seed": "^0.6.0",
     "nodemon": "^2.0.20"
   }
 }
