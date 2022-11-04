@@ -1,7 +1,9 @@
 const express = require("express");
+require("express-async-errors");
 const cors = require("cors");
 
 const connectToDatabase = require("./models/connection");
+const errorMiddleWare = require("./middleWares/errorMiddleware");
 
 class App {
   constructor() {
@@ -27,6 +29,10 @@ class App {
 
   addRouter(router) {
     this.app.use(router);
+  }
+
+  useErrorMiddleware() {
+    this.app.use(errorMiddleWare);
   }
 }
 
