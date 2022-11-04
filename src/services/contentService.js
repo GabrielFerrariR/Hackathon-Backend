@@ -10,7 +10,6 @@ class ContentService extends Service {
 
   async read(params) {
     const { track, subtrack } = params;
-    // if (!track || !subtrack) throw new Error("parametro ausente");
     const result = await this.model.read({ track, subtrack });
     return result;
   }

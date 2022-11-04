@@ -16,13 +16,9 @@ class ContentController extends Controller {
   }
 
   async read(req, res, _next) {
-    try {
-      const { params } = req;
-      const result = await this.service.read(params);
-      return res.status(StatusCodes.OK).json(result);
-    } catch (err) {
-      return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ error: this.errors.internal });
-    }
+    const { params } = req;
+    const result = await this.service.read(params);
+    return res.status(StatusCodes.OK).json(result);
   }
 }
 
