@@ -3,7 +3,6 @@ require("express-async-errors");
 const cors = require("cors");
 
 const connectToDatabase = require("./models/connection");
-const router = require("./routes/Router");
 
 class App {
   constructor() {
@@ -27,7 +26,7 @@ class App {
       });
   }
 
-  addRouter() {
+  addRouter(router) {
     this.app.use(router);
   }
 }
