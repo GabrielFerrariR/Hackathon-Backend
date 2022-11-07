@@ -12,7 +12,7 @@ class LoginController {
 
   async create(req, res, _next) {
     const { body } = req;
-    const data = await this.service.readOne(body);
+    const data = await this.service.validateLogin(body);
     res.status(StatusCodes.OK).json(data);
   }
 }

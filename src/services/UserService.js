@@ -10,7 +10,6 @@ class UserService extends Service {
     this.model = new UserModel();
 
     this.create = this.create.bind(this);
-    this.readOne = this.readOne.bind(this);
     this.validateUniqueUsername = this.validateUniqueUsername.bind(this);
     this.validateUniqueEmail = this.validateUniqueEmail.bind(this);
     this.validateLogin = this.validateLogin.bind(this);
@@ -27,12 +26,6 @@ class UserService extends Service {
     return this.model.create(data);
   }
 
-  async readOne(data) {
-    const { username, password } = data;
-
-    return this.validateLogin(username, password);
-  }
-
   async validateUniqueUsername(username) {
     const doesUsernameExist = await this.model.readUsername(username);
 
@@ -45,7 +38,9 @@ class UserService extends Service {
     if (doesEmailExist) throw new Conflict("Email already in use");
   }
 
-  async validateLogin(username, password) {
+  async validateLogin(data) {
+    const { username, password } = data;
+
     const user = await this.model.readLogin(username, password);
 
     if (!user) throw new Unauthorized("The username or password is incorrect");
