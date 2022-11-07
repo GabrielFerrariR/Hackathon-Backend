@@ -13,6 +13,7 @@ class UserService extends Service {
     this.validateUniqueUsername = this.validateUniqueUsername.bind(this);
     this.validateUniqueEmail = this.validateUniqueEmail.bind(this);
     this.validateLogin = this.validateLogin.bind(this);
+    this.toggleCompletedContent = this.toggleCompletedContent.bind(this);
   }
 
   async create(data) {
@@ -46,6 +47,16 @@ class UserService extends Service {
     if (!user) throw new Unauthorized("The username or password is incorrect");
 
     return user;
+  }
+
+  async toggleCompletedContent(userId, contentId) {
+    const user = await this.model.readOne({ _id: userId });
+
+    const { completedContents } = user;
+
+    return completedContents.includes(contentId)
+      ? this.model.removeCompletedContent(userId, contentId)
+      : this.model.addCompletedContent(userId, contentId);
   }
 }
 

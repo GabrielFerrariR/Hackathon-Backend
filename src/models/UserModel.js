@@ -1,4 +1,4 @@
-const { Schema, model: createModel } = require("mongoose");
+const { Schema, model: createModel, default: mongoose } = require("mongoose");
 const Model = require(".");
 
 const UserSchema = new Schema({
@@ -7,6 +7,7 @@ const UserSchema = new Schema({
   name: String,
   email: String,
   isAdmin: Boolean,
+  completedContents: [mongoose.Types.ObjectId],
 });
 
 class UserModel extends Model {
@@ -16,6 +17,8 @@ class UserModel extends Model {
     this.readUsername = this.readUsername.bind(this);
     this.readEmail = this.readEmail.bind(this);
     this.readLogin = this.readLogin.bind(this);
+    this.addCompletedContent = this.addCompletedContent.bind(this);
+    this.removeCompletedContent = this.removeCompletedContent.bind(this);
   }
 
   async readUsername(username) {
@@ -28,6 +31,14 @@ class UserModel extends Model {
 
   async readLogin(username, password) {
     return this.model.findOne({ username, password });
+  }
+
+  async addCompletedContent(userId, contentId) {
+    return this.model.updateOne({ _id: userId }, { $addToSet: { completedContents: contentId } });
+  }
+
+  async removeCompletedContent(userId, contentId) {
+    return this.model.updateOne({ _id: userId }, { $pull: { completedContents: contentId } });
   }
 }
 
