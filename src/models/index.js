@@ -11,8 +11,8 @@ class Model {
     return this.model.find();
   }
 
-  async readOne(id) {
-    return this.model.findOne({ _id: id });
+  async readById(id) {
+    return this.model.findById(id);
   }
 
   async update(id, data) {
