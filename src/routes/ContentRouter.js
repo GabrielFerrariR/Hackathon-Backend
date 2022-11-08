@@ -11,7 +11,7 @@
 // routes.put("/:id", (req, res) => contentController.edit(req, res));
 // routes.patch("/:id", (req, res) => contentController.update(req, res));
 // routes.delete("/:id", (req, res) => contentController.destroy(req, res));
-const ContentController = require("../controllers/contentController");
+const ContentController = require("../controllers/ContentController");
 const CustomRouter = require("./Router");
 
 class ContentRouter extends CustomRouter {
