@@ -7,7 +7,8 @@
     "start": "node .",
     "dev": "nodemon .",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "test": "mocha tests/unit/**/*.test.js"
+    "test": "mocha tests/unit/**/*.test.js --verbose",
+    "test:coverage": "nyc mocha tests/unit/**/*.test.js"
   },
   "repository": {
     "type": "git",
@@ -36,6 +37,7 @@
     "eslint-plugin-import": "^2.26.0",
     "mocha": "^10.1.0",
     "nodemon": "^2.0.20",
+    "nyc": "^15.1.0",
     "sinon": "^14.0.2"
   }
 }
