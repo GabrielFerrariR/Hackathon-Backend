@@ -10,7 +10,7 @@ class CustomRouter {
   addController(controller, route = controller.route) {
     this.router.post(route, controller.create);
     this.router.get(route, controller.read);
-    this.router.get(`${route}/:id`, controller.readOne);
+    this.router.get(`${route}/:id`, controller.readById);
     this.router.put(`${route}/:id`, controller.update);
     this.router.delete(`${route}/:id`, controller.delete);
   }
