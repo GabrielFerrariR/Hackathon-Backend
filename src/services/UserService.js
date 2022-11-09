@@ -2,7 +2,8 @@ const Service = require(".");
 const Conflict = require("../errors/Conflict");
 const Unauthorized = require("../errors/Unauthorized");
 const UserModel = require("../models/UserModel");
-const { validateUserRegistration } = require("./validations/responses");
+const { validateSchema } = require("./validations/responses");
+const { userRegistrationSchema } = require("./validations/schemas");
 
 class UserService extends Service {
   constructor() {
@@ -19,7 +20,7 @@ class UserService extends Service {
   async create(data) {
     const { username, email } = data;
 
-    validateUserRegistration(data);
+    validateSchema(userRegistrationSchema, data);
 
     await this.validateUniqueUsername(username);
     await this.validateUniqueEmail(email);
