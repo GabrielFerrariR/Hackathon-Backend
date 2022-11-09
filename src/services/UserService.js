@@ -11,27 +11,19 @@ class UserService extends Service {
     this.model = new UserModel();
 
     this.create = this.create.bind(this);
-    this.validateUniqueUsername = this.validateUniqueUsername.bind(this);
     this.validateUniqueEmail = this.validateUniqueEmail.bind(this);
     this.validateLogin = this.validateLogin.bind(this);
     this.toggleCompletedContent = this.toggleCompletedContent.bind(this);
   }
 
   async create(data) {
-    const { username, email } = data;
+    const { email } = data;
 
     validateSchema(userRegistrationSchema, data);
 
-    await this.validateUniqueUsername(username);
     await this.validateUniqueEmail(email);
 
-    return this.model.create(data);
-  }
-
-  async validateUniqueUsername(username) {
-    const doesUsernameExist = await this.model.readUsername(username);
-
-    if (doesUsernameExist) throw new Conflict("Username already in use");
+    return this.model.create({ ...data, isAdmin: false, completedContents: [] });
   }
 
   async validateUniqueEmail(email) {
@@ -41,11 +33,11 @@ class UserService extends Service {
   }
 
   async validateLogin(data) {
-    const { username, password } = data;
+    const { email, password } = data;
 
-    const user = await this.model.readLogin(username, password);
+    const user = await this.model.readLogin(email, password);
 
-    if (!user) throw new Unauthorized("The username or password is incorrect");
+    if (!user) throw new Unauthorized("The email or password is incorrect");
 
     return user;
   }
