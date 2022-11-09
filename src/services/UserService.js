@@ -50,7 +50,7 @@ class UserService extends Service {
   }
 
   async toggleCompletedContent(userId, contentId) {
-    const user = await this.model.readOne({ _id: userId });
+    const user = await this.model.readById({ _id: userId });
 
     const { completedContents } = user;
 
