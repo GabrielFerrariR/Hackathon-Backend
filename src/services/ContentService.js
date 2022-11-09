@@ -26,6 +26,14 @@ class ContentService extends Service {
     const result = await this.model.create(content);
     return result;
   }
+
+  async update(id, data) {
+    return this.model.update(id, data);
+  }
+
+  async delete(id) {
+    return this.model.delete(id);
+  }
 }
 
 module.exports = ContentService;
