@@ -1,16 +1,24 @@
-const seeder = require("mongoose-seed");
+const mongoose = require("mongoose");
+const connectToDatabase = require("../connection");
 const data = require("./contentData");
+const ContentModel = require("../ContentModel");
 
-const BASE_URL = "mongodb://localhost:27017/orangeEvolution";
+const contentModel = new ContentModel();
 
-seeder.connect(BASE_URL, () => {
-  seeder.loadModels(["../ContentModel"]);
-  seeder.clearModels(["Content"]);
-  seeder.populateModels(data, (err, done) => {
-    if (err) {
-      return console.error(err);
-    }
-    seeder.disconnect();
-    return console.log("seed done", done);
-  });
+connectToDatabase().then(() => {
+  console.log("connected");
+}).catch((error) => {
+  console.error(error);
+});
+
+const seed = async () => {
+  await contentModel.deleteMany({});
+  await contentModel.insertMany(data);
+};
+
+seed().then(() => {
+  mongoose.connection.close();
+  console.log("seed finished");
+}).catch((error) => {
+  console.error(error);
 });
