@@ -22,6 +22,14 @@ class Model {
   async delete(id) {
     return this.model.findOneAndDelete({ _id: id });
   }
+
+  async insertMany(array) {
+    return this.model.insertMany(array);
+  }
+
+  async deleteMany(array) {
+    return this.model.deleteMany(array);
+  }
 }
 
 module.exports = Model;
