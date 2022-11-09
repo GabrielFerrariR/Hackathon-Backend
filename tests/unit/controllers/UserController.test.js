@@ -116,4 +116,19 @@ describe('User controller class', () => {
       expect(res.json.calledWith([])).to.be.true;
     });
   })
+  describe('toggleCompletedComponent method, on a successful request', () => {
+    beforeEach(async () => {
+      req.params = { id: userMockDBResponse._id, contentId: 1};
+      res.status = sinon.stub().returns(res);
+      res.end = sinon.stub().returns(res);
+      sinon.stub(controller.service, "toggleCompletedContent").resolves(null); 
+    });
+
+    afterEach(() => sinon.restore());
+
+    it('should return a status 200', async () => {
+      await controller.toggleCompletedContent(req, res, next);
+      expect(res.status.calledWith(200)).to.be.true;
+    });
+  })
 });
