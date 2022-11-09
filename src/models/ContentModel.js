@@ -9,7 +9,12 @@ const ContentSchema = new Schema({
   link: String,
   track: String,
   subTrack: String,
-  likes: Number,
+  likes: { type: Number, default: 0 },
+  previewData: {
+    title: { type: String, default: "None" },
+    description: { type: String, default: "None" },
+    images: [String],
+  },
 });
 
 class ContentModel extends Model {
