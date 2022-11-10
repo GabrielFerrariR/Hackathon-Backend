@@ -11,6 +11,7 @@ class UserService extends Service {
     this.model = new UserModel();
 
     this.create = this.create.bind(this);
+    this.read = this.read.bind(this);
     this.validateUniqueEmail = this.validateUniqueEmail.bind(this);
     this.validateLogin = this.validateLogin.bind(this);
     this.toggleCompletedContent = this.toggleCompletedContent.bind(this);
@@ -50,6 +51,10 @@ class UserService extends Service {
     return completedContents.includes(contentId)
       ? this.model.removeCompletedContent(userId, contentId)
       : this.model.addCompletedContent(userId, contentId);
+  }
+
+  async read() {
+    return this.model.readWithoutPassword();
   }
 }
 
