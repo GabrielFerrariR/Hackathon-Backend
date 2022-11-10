@@ -550,101 +550,101 @@ module.exports = [
   }, {
     name: "Mini Curso Javascript do Zero", type: "Curso", creator: "Cubos Academy", duration: "03:30:00", link: "https://acesse.cubos.academy/minicurso-javascript?hsLang=pt", track: tracks.fullstack, subTrack: "optional", likes: 0,
   }, {
-    name: "UI Design", type: "Live", creator: "Grupo FCamara", duration: "01:37:14", link: "https://www.youtube.com/watch?v=bHDDbIsKVnI", track: tracks.uxui, subTrack: "fundamentosUI", likes: 0,
+    name: "UI Design", type: "Live", creator: "Grupo FCamara", duration: "01:37:14", link: "https://www.youtube.com/watch?v=bHDDbIsKVnI", track: tracks.uxui, subTrack: "fundamentals", likes: 0,
   }, {
-    name: "UI Design", type: "Artigo", creator: "InfoQ", duration: "00:17:00", link: "https://www.infoq.com/br/articles/ios-android-react-native-design-patterns/", track: tracks.uxui, subTrack: "fundamentosUI", likes: 0,
+    name: "UI Design", type: "Artigo", creator: "InfoQ", duration: "00:17:00", link: "https://www.infoq.com/br/articles/ios-android-react-native-design-patterns/", track: tracks.uxui, subTrack: "fundamentals", likes: 0,
   }, {
-    name: "Design", type: "Live", creator: "Orange Juice", duration: "01:07:17", link: "https://www.youtube.com/watch?v=YvyrrmHYqbI", track: tracks.uxui, subTrack: "fundamentosUI", likes: 0,
+    name: "Design", type: "Live", creator: "Orange Juice", duration: "01:07:17", link: "https://www.youtube.com/watch?v=YvyrrmHYqbI", track: tracks.uxui, subTrack: "fundamentals", likes: 0,
   }, {
-    name: "Grid", type: "Artigo", creator: "UX Collective", duration: "00:09:00", link: "https://brasil.uxdesign.cc/um-guia-completo-sobre-grids-para-design-responsivo-6b192fea0124", track: tracks.uxui, subTrack: "fundamentosUI", likes: 0,
+    name: "Grid", type: "Artigo", creator: "UX Collective", duration: "00:09:00", link: "https://brasil.uxdesign.cc/um-guia-completo-sobre-grids-para-design-responsivo-6b192fea0124", track: tracks.uxui, subTrack: "fundamentals", likes: 0,
   }, {
-    name: "Teoria da Cores", type: "Artigo", creator: "Chief of Design", duration: "00:32:00", link: "https://chiefofdesign.com.br/teoria-das-cores/", track: tracks.uxui, subTrack: "fundamentosUI", likes: 0,
+    name: "Teoria da Cores", type: "Artigo", creator: "Chief of Design", duration: "00:32:00", link: "https://chiefofdesign.com.br/teoria-das-cores/", track: tracks.uxui, subTrack: "fundamentals", likes: 0,
   }, {
-    name: "Teoria da Cores", type: "Apostila", creator: "Alura", duration: "00:09:00", link: "https://www.alura.com.br/apostila-ux-usabilidade-mobile-web/design-visual#teoria-das-cores", track: tracks.uxui, subTrack: "fundamentosUI", likes: 0,
+    name: "Teoria da Cores", type: "Apostila", creator: "Alura", duration: "00:09:00", link: "https://www.alura.com.br/apostila-ux-usabilidade-mobile-web/design-visual#teoria-das-cores", track: tracks.uxui, subTrack: "fundamentals", likes: 0,
   }, {
-    name: "Tipografia", type: "Artigo", creator: "Orange Juice", duration: "00:03:00", link: "https://medium.com/orangejuicefc/como-fazer-escolhas-tipogr%C3%A1ficas-mais-assertivas-34e2d9fe7c38", track: tracks.uxui, subTrack: "fundamentosUI", likes: 0,
+    name: "Tipografia", type: "Artigo", creator: "Orange Juice", duration: "00:03:00", link: "https://medium.com/orangejuicefc/como-fazer-escolhas-tipogr%C3%A1ficas-mais-assertivas-34e2d9fe7c38", track: tracks.uxui, subTrack: "fundamentals", likes: 0,
   }, {
-    name: "Tipografia", type: "Apostila", creator: "Alura", duration: "00:08:00", link: "https://www.alura.com.br/apostila-ux-usabilidade-mobile-web/usabilidade-mobile#tipografia", track: tracks.uxui, subTrack: "fundamentosUI", likes: 0,
+    name: "Tipografia", type: "Apostila", creator: "Alura", duration: "00:08:00", link: "https://www.alura.com.br/apostila-ux-usabilidade-mobile-web/usabilidade-mobile#tipografia", track: tracks.uxui, subTrack: "fundamentals", likes: 0,
   }, {
-    name: "Gestalt", type: "Artigo", creator: "UX Collective", duration: "00:01:00", link: "https://brasil.uxdesign.cc/princ%C3%ADpios-da-gestalt-aplicados-no-design-de-intera%C3%A7%C3%A3o-7132e403d076", track: tracks.uxui, subTrack: "fundamentosUI", likes: 0,
+    name: "Gestalt", type: "Artigo", creator: "UX Collective", duration: "00:01:00", link: "https://brasil.uxdesign.cc/princ%C3%ADpios-da-gestalt-aplicados-no-design-de-intera%C3%A7%C3%A3o-7132e403d076", track: tracks.uxui, subTrack: "fundamentals", likes: 0,
   }, {
-    name: "Style Guide", type: "Artigo", creator: "UX Collective", duration: "00:06:00", link: "https://brasil.uxdesign.cc/style-guide-por-que-quando-como-e-onde-criar-um-f7b173006740", track: tracks.uxui, subTrack: "fundamentosUI", likes: 0,
+    name: "Style Guide", type: "Artigo", creator: "UX Collective", duration: "00:06:00", link: "https://brasil.uxdesign.cc/style-guide-por-que-quando-como-e-onde-criar-um-f7b173006740", track: tracks.uxui, subTrack: "fundamentals", likes: 0,
   }, {
-    name: "Protótipo", type: "Artigo", creator: "Orange Juice", duration: "00:11:00", link: "https://medium.com/orangejuicefc/prototipa%C3%A7%C3%A3o-conhecendo-os-n%C3%ADveis-de-fidelidade-e-suas-aplica%C3%A7%C3%B5es-pr%C3%A1ticas-d3e815547b50", track: tracks.uxui, subTrack: "fundamentosUI", likes: 0,
+    name: "Protótipo", type: "Artigo", creator: "Orange Juice", duration: "00:11:00", link: "https://medium.com/orangejuicefc/prototipa%C3%A7%C3%A3o-conhecendo-os-n%C3%ADveis-de-fidelidade-e-suas-aplica%C3%A7%C3%B5es-pr%C3%A1ticas-d3e815547b50", track: tracks.uxui, subTrack: "fundamentals", likes: 0,
   }, {
-    name: "Protótipo", type: "Apostila", creator: "Alura", duration: "00:10:00", link: "https://www.alura.com.br/apostila-ux-usabilidade-mobile-web/principios#prototipos", track: tracks.uxui, subTrack: "fundamentosUI", likes: 0,
+    name: "Protótipo", type: "Apostila", creator: "Alura", duration: "00:10:00", link: "https://www.alura.com.br/apostila-ux-usabilidade-mobile-web/principios#prototipos", track: tracks.uxui, subTrack: "fundamentals", likes: 0,
   }, {
-    name: "Protótipo", type: "Vídeo", creator: "UX Now", duration: "00:11:08", link: "https://youtu.be/INPlcg_BsGc", track: tracks.uxui, subTrack: "fundamentosUI", likes: 0,
+    name: "Protótipo", type: "Vídeo", creator: "UX Now", duration: "00:11:08", link: "https://youtu.be/INPlcg_BsGc", track: tracks.uxui, subTrack: "fundamentals", likes: 0,
   }, {
-    name: "Interface", type: "Vídeo", creator: "UX Now", duration: "00:09:47", link: "https://youtu.be/BD4CnI2Zc1s", track: tracks.uxui, subTrack: "fundamentosUI", likes: 0,
+    name: "Interface", type: "Vídeo", creator: "UX Now", duration: "00:09:47", link: "https://youtu.be/BD4CnI2Zc1s", track: tracks.uxui, subTrack: "fundamentals", likes: 0,
   }, {
-    name: "Interface", type: "Vídeo", creator: "UX Now", duration: "00:15:54", link: "https://youtu.be/mgOYINElFqI", track: tracks.uxui, subTrack: "fundamentosUI", likes: 0,
+    name: "Interface", type: "Vídeo", creator: "UX Now", duration: "00:15:54", link: "https://youtu.be/mgOYINElFqI", track: tracks.uxui, subTrack: "fundamentals", likes: 0,
   }, {
-    name: "Interface", type: "Vídeo", creator: "UX Now", duration: "00:12:15", link: "https://youtu.be/mgOYINElFqI", track: tracks.uxui, subTrack: "fundamentosUI", likes: 0,
+    name: "Interface", type: "Vídeo", creator: "UX Now", duration: "00:12:15", link: "https://youtu.be/mgOYINElFqI", track: tracks.uxui, subTrack: "fundamentals", likes: 0,
   }, {
-    name: "Design", type: "Vídeo", creator: "UX Now", duration: "00:06:10", link: "https://youtu.be/zaFEEvHZgjw", track: tracks.uxui, subTrack: "fundamentosUX", likes: 0,
+    name: "Design", type: "Vídeo", creator: "UX Now", duration: "00:06:10", link: "https://youtu.be/zaFEEvHZgjw", track: tracks.uxui, subTrack: "fundamentals", likes: 0,
   }, {
-    name: "UX Design", type: "Vídeo", creator: "UX Now", duration: "00:06:37", link: "https://youtu.be/WAi6ixIfdd4", track: tracks.uxui, subTrack: "fundamentosUX", likes: 0,
+    name: "UX Design", type: "Vídeo", creator: "UX Now", duration: "00:06:37", link: "https://youtu.be/WAi6ixIfdd4", track: tracks.uxui, subTrack: "fundamentals", likes: 0,
   }, {
-    name: "UX Design", type: "Vídeo", creator: "UX Now", duration: "00:08:17", link: "https://youtu.be/ii_yO_at8Do", track: tracks.uxui, subTrack: "fundamentosUX", likes: 0,
+    name: "UX Design", type: "Vídeo", creator: "UX Now", duration: "00:08:17", link: "https://youtu.be/ii_yO_at8Do", track: tracks.uxui, subTrack: "fundamentals", likes: 0,
   }, {
-    name: "UX Design", type: "Artigo", creator: "Mergo", duration: "00:03:00", link: "https://uxdesign.blog.br/don-norman-e-o-termo-ux-6dffb3f8d218", track: tracks.uxui, subTrack: "fundamentosUX", likes: 0,
+    name: "UX Design", type: "Artigo", creator: "Mergo", duration: "00:03:00", link: "https://uxdesign.blog.br/don-norman-e-o-termo-ux-6dffb3f8d218", track: tracks.uxui, subTrack: "fundamentals", likes: 0,
   }, {
-    name: "UX Design", type: "Apostila", creator: "Alura", duration: "00:22:00", link: "https://www.alura.com.br/apostila-ux-usabilidade-mobile-web/experiencia", track: tracks.uxui, subTrack: "fundamentosUX", likes: 0,
+    name: "UX Design", type: "Apostila", creator: "Alura", duration: "00:22:00", link: "https://www.alura.com.br/apostila-ux-usabilidade-mobile-web/experiencia", track: tracks.uxui, subTrack: "fundamentals", likes: 0,
   }, {
-    name: "UX Design", type: "Live", creator: "Orange Juice", duration: "01:17:08", link: "https://youtu.be/qWbaJuJhdX8", track: tracks.uxui, subTrack: "fundamentosUX", likes: 0,
+    name: "UX Design", type: "Live", creator: "Orange Juice", duration: "01:17:08", link: "https://youtu.be/qWbaJuJhdX8", track: tracks.uxui, subTrack: "fundamentals", likes: 0,
   }, {
-    name: "UX Design", type: "Live", creator: "Grupo FCamara", duration: "01:23:16", link: "https://www.youtube.com/watch?v=eWAvEOzL3PI", track: tracks.uxui, subTrack: "fundamentosUX", likes: 0,
+    name: "UX Design", type: "Live", creator: "Grupo FCamara", duration: "01:23:16", link: "https://www.youtube.com/watch?v=eWAvEOzL3PI", track: tracks.uxui, subTrack: "fundamentals", likes: 0,
   }, {
-    name: "UX Design", type: "Live", creator: "Orange Juice", duration: "01:12:32", link: "https://www.youtube.com/watch?v=12QnyGevxp8", track: tracks.uxui, subTrack: "fundamentosUX", likes: 0,
+    name: "UX Design", type: "Live", creator: "Orange Juice", duration: "01:12:32", link: "https://www.youtube.com/watch?v=12QnyGevxp8", track: tracks.uxui, subTrack: "fundamentals", likes: 0,
   }, {
-    name: "UX Research", type: "Live", creator: "Grupo FCamara", duration: "01:20:30", link: "https://www.youtube.com/watch?v=v6ojU0Wa50Q", track: tracks.uxui, subTrack: "fundamentosUX", likes: 0,
+    name: "UX Research", type: "Live", creator: "Grupo FCamara", duration: "01:20:30", link: "https://www.youtube.com/watch?v=v6ojU0Wa50Q", track: tracks.uxui, subTrack: "fundamentals", likes: 0,
   }, {
-    name: "UX Research", type: "Apostila", creator: "Alura", duration: "00:30:00", link: "https://www.alura.com.br/apostila-ux-usabilidade-mobile-web/pesquisa", track: tracks.uxui, subTrack: "fundamentosUX", likes: 0,
+    name: "UX Research", type: "Apostila", creator: "Alura", duration: "00:30:00", link: "https://www.alura.com.br/apostila-ux-usabilidade-mobile-web/pesquisa", track: tracks.uxui, subTrack: "fundamentals", likes: 0,
   }, {
-    name: "UX Research", type: "Vídeo", creator: "UX Now", duration: "00:06:26", link: "https://youtu.be/KnFJAhiClnE", track: tracks.uxui, subTrack: "fundamentosUX", likes: 0,
+    name: "UX Research", type: "Vídeo", creator: "UX Now", duration: "00:06:26", link: "https://youtu.be/KnFJAhiClnE", track: tracks.uxui, subTrack: "fundamentals", likes: 0,
   }, {
-    name: "Design Thinking", type: "Artigo", creator: "Orange Juice", duration: "00:04:00", link: "https://medium.com/orangejuicefc/design-thinking-uma-abordagem-para-a-sua-vida-3b93ed78b606", track: tracks.uxui, subTrack: "fundamentosUX", likes: 0,
+    name: "Design Thinking", type: "Artigo", creator: "Orange Juice", duration: "00:04:00", link: "https://medium.com/orangejuicefc/design-thinking-uma-abordagem-para-a-sua-vida-3b93ed78b606", track: tracks.uxui, subTrack: "fundamentals", likes: 0,
   }, {
-    name: "Design Thinking", type: "Artigo", creator: "Orange Juice", duration: "00:04:00", link: "https://medium.com/orangejuicefc/vacinar-conhecendo-design-thinking-na-pr%C3%A1tica-87656e0f6e5e", track: tracks.uxui, subTrack: "fundamentosUX", likes: 0,
+    name: "Design Thinking", type: "Artigo", creator: "Orange Juice", duration: "00:04:00", link: "https://medium.com/orangejuicefc/vacinar-conhecendo-design-thinking-na-pr%C3%A1tica-87656e0f6e5e", track: tracks.uxui, subTrack: "fundamentals", likes: 0,
   }, {
-    name: "Design Thinking", type: "Live", creator: "Grupo FCamara", duration: "01:00:58", link: "https://www.youtube.com/watch?v=3s9pWGsU02k", track: tracks.uxui, subTrack: "fundamentosUX", likes: 0,
+    name: "Design Thinking", type: "Live", creator: "Grupo FCamara", duration: "01:00:58", link: "https://www.youtube.com/watch?v=3s9pWGsU02k", track: tracks.uxui, subTrack: "fundamentals", likes: 0,
   }, {
-    name: "Benchmarking", type: "Artigo", creator: "G4 Educação", duration: "00:22:00", link: "https://g4educacao.com/portal/o-que-e-benchmarking/", track: tracks.uxui, subTrack: "fundamentosUX", likes: 0,
+    name: "Benchmarking", type: "Artigo", creator: "G4 Educação", duration: "00:22:00", link: "https://g4educacao.com/portal/o-que-e-benchmarking/", track: tracks.uxui, subTrack: "fundamentals", likes: 0,
   }, {
-    name: "Persona", type: "Vídeo", creator: "UX Now", duration: "00:09:17", link: "https://youtu.be/kdUk7DZS6aQ", track: tracks.uxui, subTrack: "fundamentosUX", likes: 0,
+    name: "Persona", type: "Vídeo", creator: "UX Now", duration: "00:09:17", link: "https://youtu.be/kdUk7DZS6aQ", track: tracks.uxui, subTrack: "fundamentals", likes: 0,
   }, {
-    name: "Persona", type: "Vídeo", creator: "UX Now", duration: "00:04:50", link: "https://youtu.be/q_NrzJBS7QI", track: tracks.uxui, subTrack: "fundamentosUX", likes: 0,
+    name: "Persona", type: "Vídeo", creator: "UX Now", duration: "00:04:50", link: "https://youtu.be/q_NrzJBS7QI", track: tracks.uxui, subTrack: "fundamentals", likes: 0,
   }, {
-    name: "Persona", type: "Apostila", creator: "Alura", duration: "00:00:30", link: "https://www.alura.com.br/apostila-ux-usabilidade-mobile-web/personas#numero-de-personas", track: tracks.uxui, subTrack: "fundamentosUX", likes: 0,
+    name: "Persona", type: "Apostila", creator: "Alura", duration: "00:00:30", link: "https://www.alura.com.br/apostila-ux-usabilidade-mobile-web/personas#numero-de-personas", track: tracks.uxui, subTrack: "fundamentals", likes: 0,
   }, {
-    name: "Mapa de Empatia", type: "Apostila", creator: "Alura", duration: "00:02:00", link: "https://www.alura.com.br/apostila-ux-usabilidade-mobile-web/personas#mapa-de-empatia", track: tracks.uxui, subTrack: "fundamentosUX", likes: 0,
+    name: "Mapa de Empatia", type: "Apostila", creator: "Alura", duration: "00:02:00", link: "https://www.alura.com.br/apostila-ux-usabilidade-mobile-web/personas#mapa-de-empatia", track: tracks.uxui, subTrack: "fundamentals", likes: 0,
   }, {
-    name: "Fluxo de Usuário", type: "Artigo", creator: "Ateliware", duration: "00:05:00", link: "https://ateliware.com/blog/user-flow", track: tracks.uxui, subTrack: "fundamentosUX", likes: 0,
+    name: "Fluxo de Usuário", type: "Artigo", creator: "Ateliware", duration: "00:05:00", link: "https://ateliware.com/blog/user-flow", track: tracks.uxui, subTrack: "fundamentals", likes: 0,
   }, {
-    name: "Fluxo de Usuário", type: "Artigo", creator: "Awari", duration: "00:20:00", link: "https://awari.com.br/guia-fluxogramas-ux/", track: tracks.uxui, subTrack: "fundamentosUX", likes: 0,
+    name: "Fluxo de Usuário", type: "Artigo", creator: "Awari", duration: "00:20:00", link: "https://awari.com.br/guia-fluxogramas-ux/", track: tracks.uxui, subTrack: "fundamentals", likes: 0,
   }, {
-    name: "Jornada do Usuário", type: "Artigo", creator: "Aela", duration: "00:09:00", link: "https://aelaschool.com/designdeinteracao/jornada-do-usuario-e-sua-importancia/", track: tracks.uxui, subTrack: "fundamentosUX", likes: 0,
+    name: "Jornada do Usuário", type: "Artigo", creator: "Aela", duration: "00:09:00", link: "https://aelaschool.com/designdeinteracao/jornada-do-usuario-e-sua-importancia/", track: tracks.uxui, subTrack: "fundamentals", likes: 0,
   }, {
-    name: "Jornada do Usuário", type: "Vídeo", creator: "UX Unicórnio", duration: "00:40:43", link: "https://www.youtube.com/watch?v=EiroPM-lL-U", track: tracks.uxui, subTrack: "fundamentosUX", likes: 0,
+    name: "Jornada do Usuário", type: "Vídeo", creator: "UX Unicórnio", duration: "00:40:43", link: "https://www.youtube.com/watch?v=EiroPM-lL-U", track: tracks.uxui, subTrack: "fundamentals", likes: 0,
   }, {
-    name: "Storytelling", type: "Artigo", creator: "Orange Juice", duration: "00:04:00", link: "https://medium.com/orangejuicefc/storytelling-o-que-s%C3%A3o-como-vivem-e-onde-habitam-d3527a6cf142", track: tracks.uxui, subTrack: "fundamentosUX", likes: 0,
+    name: "Storytelling", type: "Artigo", creator: "Orange Juice", duration: "00:04:00", link: "https://medium.com/orangejuicefc/storytelling-o-que-s%C3%A3o-como-vivem-e-onde-habitam-d3527a6cf142", track: tracks.uxui, subTrack: "fundamentals", likes: 0,
   }, {
-    name: "Arquitetura da Informação", type: "Vídeo", creator: "UX Now", duration: "00:08:42", link: "https://youtu.be/jAN1330de-s", track: tracks.uxui, subTrack: "fundamentosUX", likes: 0,
+    name: "Arquitetura da Informação", type: "Vídeo", creator: "UX Now", duration: "00:08:42", link: "https://youtu.be/jAN1330de-s", track: tracks.uxui, subTrack: "fundamentals", likes: 0,
   }, {
-    name: "Arquitetura da Informação", type: "Vídeo", creator: "UX Now", duration: "00:09:34", link: "https://youtu.be/vmvSMYaV4oE", track: tracks.uxui, subTrack: "fundamentosUX", likes: 0,
+    name: "Arquitetura da Informação", type: "Vídeo", creator: "UX Now", duration: "00:09:34", link: "https://youtu.be/vmvSMYaV4oE", track: tracks.uxui, subTrack: "fundamentals", likes: 0,
   }, {
-    name: "Heurísticas de Nielsen", type: "Artigo", creator: "Aela", duration: "00:08:00", link: "https://medium.com/aela/10-heur%C3%ADsticas-de-nielsen-dicas-para-melhorar-a-usabilidade-de-sua-interface-35ef86a7fb41", track: tracks.uxui, subTrack: "fundamentosUX", likes: 0,
+    name: "Heurísticas de Nielsen", type: "Artigo", creator: "Aela", duration: "00:08:00", link: "https://medium.com/aela/10-heur%C3%ADsticas-de-nielsen-dicas-para-melhorar-a-usabilidade-de-sua-interface-35ef86a7fb41", track: tracks.uxui, subTrack: "fundamentals", likes: 0,
   }, {
-    name: "Heurísticas de Nielsen", type: "Apostila", creator: "Alura", duration: "00:12:00", link: "https://www.alura.com.br/apostila-ux-usabilidade-mobile-web/principios#as-dez-heuristicas-de-nielsen", track: tracks.uxui, subTrack: "fundamentosUX", likes: 0,
+    name: "Heurísticas de Nielsen", type: "Apostila", creator: "Alura", duration: "00:12:00", link: "https://www.alura.com.br/apostila-ux-usabilidade-mobile-web/principios#as-dez-heuristicas-de-nielsen", track: tracks.uxui, subTrack: "fundamentals", likes: 0,
   }, {
-    name: "Teste de Usabilidade", type: "Live", creator: "Grupo FCamara", duration: "01:18:55", link: "https://www.youtube.com/watch?v=VMXF3EDXZT8", track: tracks.uxui, subTrack: "fundamentosUX", likes: 0,
+    name: "Teste de Usabilidade", type: "Live", creator: "Grupo FCamara", duration: "01:18:55", link: "https://www.youtube.com/watch?v=VMXF3EDXZT8", track: tracks.uxui, subTrack: "fundamentals", likes: 0,
   }, {
-    name: "Teste de Usabilidade", type: "Live", creator: "Orange Juice", duration: "00:31:00", link: "https://youtu.be/9Bzd_PfKYLk", track: tracks.uxui, subTrack: "fundamentosUX", likes: 0,
+    name: "Teste de Usabilidade", type: "Live", creator: "Orange Juice", duration: "00:31:00", link: "https://youtu.be/9Bzd_PfKYLk", track: tracks.uxui, subTrack: "fundamentals", likes: 0,
   }, {
-    name: "Teste de Usabilidade", type: "Apostila", creator: "Alura", duration: "00:31:00", link: "https://www.alura.com.br/apostila-ux-usabilidade-mobile-web/usabilidade", track: tracks.uxui, subTrack: "fundamentosUX", likes: 0,
+    name: "Teste de Usabilidade", type: "Apostila", creator: "Alura", duration: "00:31:00", link: "https://www.alura.com.br/apostila-ux-usabilidade-mobile-web/usabilidade", track: tracks.uxui, subTrack: "fundamentals", likes: 0,
   }, {
-    name: "Acessibilidade", type: "Live", creator: "Grupo FCamara", duration: "01:30:15", link: "https://www.youtube.com/watch?v=UqF6NZP0d8w", track: tracks.uxui, subTrack: "fundamentosUX", likes: 0,
+    name: "Acessibilidade", type: "Live", creator: "Grupo FCamara", duration: "01:30:15", link: "https://www.youtube.com/watch?v=UqF6NZP0d8w", track: tracks.uxui, subTrack: "fundamentals", likes: 0,
   }, {
     name: "Qualidade além dos bugs", type: "Live", creator: "Orange Juice", duration: "01:04:11", link: "https://youtu.be/voE1-yUY-Qg", track: tracks.qa, subTrack: "basics", likes: 0,
   }, {

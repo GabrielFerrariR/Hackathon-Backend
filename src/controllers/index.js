@@ -3,9 +3,9 @@ const { StatusCodes } = require("http-status-codes");
 class Controller {
   async create(req, res, _next) {
     const { body } = req;
-    const data = await this.service.create(body);
+    await this.service.create(body);
 
-    return res.status(StatusCodes.CREATED).json(data);
+    return res.status(StatusCodes.CREATED).end();
   }
 
   async read(_req, res, _next) {
@@ -23,16 +23,16 @@ class Controller {
 
   async update(req, res, _next) {
     const { params: id, body } = req;
-    const data = await this.service.update(id, body);
+    await this.service.update(id, body);
 
-    return res.status(StatusCodes.OK).json(data);
+    return res.status(StatusCodes.OK).end();
   }
 
   async delete(req, res, _next) {
     const { id } = req.params;
-    const data = await this.service.delete(id);
+    await this.service.delete(id);
 
-    return res.status(StatusCodes.OK).json(data);
+    return res.status(StatusCodes.OK).end();
   }
 }
 
