@@ -9,7 +9,7 @@ const userRegistrationSchema = Joi.object({
 });
 
 const contentSchema = Joi.object({
-  name: Joi.string().min(3).required(),
+  name: Joi.string().required(),
   type: Joi.string().required(),
   duration: Joi.string().required(),
   creator: Joi.string().required(),

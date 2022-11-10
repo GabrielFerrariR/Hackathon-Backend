@@ -17,7 +17,7 @@ const seed = async () => {
   const contentWithPreview = await Promise.all(data.map(async (content) => {
     const { link } = content;
     const previewData = await getPreviewData(link);
-    return { ...data, previewData };
+    return { ...content, previewData };
   }));
   await contentModel.insertMany(contentWithPreview);
 };
