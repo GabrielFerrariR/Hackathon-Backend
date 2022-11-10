@@ -2,7 +2,8 @@ const Service = require(".");
 const Conflict = require("../errors/Conflict");
 const Unauthorized = require("../errors/Unauthorized");
 const UserModel = require("../models/UserModel");
-const { validateUserRegistration } = require("./validations/responses");
+const { validateSchema } = require("./validations/responses");
+const { userRegistrationSchema } = require("./validations/schemas");
 
 class UserService extends Service {
   constructor() {
@@ -18,7 +19,7 @@ class UserService extends Service {
   async create(data) {
     const { email } = data;
 
-    validateUserRegistration(data);
+    validateSchema(userRegistrationSchema, data);
 
     await this.validateUniqueEmail(email);
 
@@ -42,7 +43,7 @@ class UserService extends Service {
   }
 
   async toggleCompletedContent(userId, contentId) {
-    const user = await this.model.readOne({ _id: userId });
+    const user = await this.model.readById({ _id: userId });
 
     const { completedContents } = user;
 

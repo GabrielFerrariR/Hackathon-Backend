@@ -8,7 +8,18 @@ const userRegistrationSchema = Joi.object({
   email: Joi.string().email().required(),
 });
 
+const contentSchema = Joi.object({
+  name: Joi.string().required(),
+  type: Joi.string().required(),
+  duration: Joi.string().required(),
+  creator: Joi.string().required(),
+  link: Joi.string().uri().required(),
+  track: Joi.string().required(),
+  subTrack: Joi.string().required(),
+});
+
 module.exports = {
   idSchema,
   userRegistrationSchema,
+  contentSchema,
 };

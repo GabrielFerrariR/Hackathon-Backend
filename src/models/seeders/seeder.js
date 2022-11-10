@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const connectToDatabase = require("../connection");
 const data = require("./contentData");
 const ContentModel = require("../ContentModel");
+const { getPreviewData } = require("../../helpers");
 
 const contentModel = new ContentModel();
 
@@ -13,7 +14,12 @@ connectToDatabase().then(() => {
 
 const seed = async () => {
   await contentModel.deleteMany({});
-  await contentModel.insertMany(data);
+  const contentWithPreview = await Promise.all(data.map(async (content) => {
+    const { link } = content;
+    const previewData = await getPreviewData(link);
+    return { ...content, previewData };
+  }));
+  await contentModel.insertMany(contentWithPreview);
 };
 
 seed().then(() => {
