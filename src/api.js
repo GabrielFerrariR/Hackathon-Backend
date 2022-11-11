@@ -3,7 +3,7 @@ require("express-async-errors");
 const cors = require("cors");
 
 const connectToDatabase = require("./models/connection");
-const errorMiddleWare = require("./middleWares/errorMiddleware");
+const errorMiddleWare = require("./middlewares/errorMiddleware");
 
 class App {
   constructor() {
