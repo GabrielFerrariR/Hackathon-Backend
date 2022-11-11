@@ -12,7 +12,7 @@ class Model {
   }
 
   async readById(id) {
-    return this.model.findById(id, { password: 0 });
+    return this.model.findById(id);
   }
 
   async update(id, data) {
@@ -29,10 +29,6 @@ class Model {
 
   async deleteMany(array) {
     return this.model.deleteMany(array);
-  }
-
-  async readWithoutPassword() {
-    return this.model.find({}, { password: 0 });
   }
 }
 
