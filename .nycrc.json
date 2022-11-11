@@ -1,10 +1,18 @@
 {
   "all": true,
   "exclude": [
+    "coverage",
     "src/routes",
-    "src/middleWares",
+    "src/middlewares",
     "src/models/connection.js",
     "tests/",
     "src/services/validations"
+  ],
+  "reporter": [
+    "text",
+    "text-summary",
+    "json-summary",
+    "html",
+    "lcov"
   ]
 }
