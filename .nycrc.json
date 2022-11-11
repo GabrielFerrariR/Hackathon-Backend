@@ -1,0 +1,10 @@
+{
+  "all": true,
+  "exclude": [
+    "src/routes",
+    "src/middleWares",
+    "src/models/connection.js",
+    "tests/",
+    "src/services/validations"
+  ]
+}
