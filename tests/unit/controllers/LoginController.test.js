@@ -19,7 +19,7 @@ describe("Login controller class", () => {
     beforeEach(async () => {
       req.body = loginMockRequest;
       res.status = sinon.stub().returns(res);
-      res.json = sinon.stub().returns(res);
+      res.end = sinon.stub().returns(res);
       sinon.stub(controller.service, "validateLogin").resolves(userMockDBResponse);
     });
 
@@ -28,11 +28,6 @@ describe("Login controller class", () => {
     it("should return a status 200", async () => {
       await controller.create(req, res, next);
       expect(res.status.calledWith(200)).to.be.true;
-    });
-
-    it("should return an user", async () => {
-      await controller.create(req, res, next);
-      expect(res.json.calledWith(userMockDBResponse)).to.be.true;
     });
   });
 });
