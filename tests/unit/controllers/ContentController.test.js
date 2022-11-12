@@ -7,7 +7,7 @@ chai.use(chaiHttp);
 const { expect } = chai;
 
 const ContentController = require("../../../src/controllers/ContentController");
-const [contentMockDBResponse, contentMockRequest] = require("../../mocks/contentMock");
+const [contentMockDBResponse, contentMockRequest, likeResponse] = require("../../mocks/contentMock");
 
 describe("Content controller class", () => {
   const controller = new ContentController();
@@ -102,6 +102,48 @@ describe("Content controller class", () => {
     it("should return a status 200", async () => {
       await controller.delete(req, res, next);
       expect(res.status.calledWith(200)).to.be.true;
+    });
+  });
+
+  describe("likeContent method, on a successful request", () => {
+    beforeEach(async () => {
+      req.params = { id: likeResponse._id };
+      res.status = sinon.stub().returns(res);
+      res.json = sinon.stub().returns(res);
+      sinon.stub(controller.service, "likeContent").resolves(likeResponse);
+    });
+
+    afterEach(() => sinon.restore());
+
+    it("should return a status 200", async () => {
+      await controller.likeContent(req, res, next);
+      expect(res.status.calledWith(200)).to.be.true;
+    });
+
+    it("should return an object with _id and likes", async () => {
+      await controller.likeContent(req, res, next);
+      expect(res.json.calledWith(likeResponse)).to.be.true;
+    });
+  });
+
+  describe("dislikeContent method, on a successful request", () => {
+    beforeEach(async () => {
+      req.params = { id: likeResponse._id };
+      res.status = sinon.stub().returns(res);
+      res.json = sinon.stub().returns(res);
+      sinon.stub(controller.service, "dislikeContent").resolves(likeResponse);
+    });
+
+    afterEach(() => sinon.restore());
+
+    it("should return a status 200", async () => {
+      await controller.dislikeContent(req, res, next);
+      expect(res.status.calledWith(200)).to.be.true;
+    });
+
+    it("should return an object with _id and likes", async () => {
+      await controller.dislikeContent(req, res, next);
+      expect(res.json.calledWith(likeResponse)).to.be.true;
     });
   });
 });
