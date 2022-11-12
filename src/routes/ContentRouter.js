@@ -22,6 +22,8 @@ class ContentRouter extends CustomRouter {
 
   addController(controller, route = controller.route) {
     this.router.post(route, controller.create);
+    this.router.patch(`${route}/:id/like`, controller.likeContent);
+    this.router.patch(`${route}/:id/dislike`, controller.dislikeContent);
     this.router.get(`${route}/:track/:subtrack`, controller.read);
     this.router.get(`${route}/:id`, controller.readById);
     this.router.put(`${route}/:id`, controller.update);
