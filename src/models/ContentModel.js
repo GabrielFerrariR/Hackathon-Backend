@@ -26,6 +26,14 @@ class ContentModel extends Model {
   async read(params) {
     return this.model.find(params);
   }
+
+  async like(id) {
+    return this.model.findOneAndUpdate({ _id: id }, { $inc: { likes: +1 } }, { new: true });
+  }
+
+  async dislike(id) {
+    return this.model.findOneAndUpdate({ _id: id }, { $inc: { likes: -1 } }, { new: true });
+  }
 }
 
 module.exports = ContentModel;

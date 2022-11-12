@@ -3,6 +3,7 @@ const ContentModel = require("../models/ContentModel");
 const { contentSchema } = require("./validations/schemas");
 const { validateSchema } = require("./validations/responses");
 const { getPreviewData } = require("../helpers");
+const BadRequest = require("../errors/BadRequest");
 
 class ContentService extends Service {
   constructor() {
@@ -32,6 +33,20 @@ class ContentService extends Service {
     const result = await this.model.create(content);
 
     return result;
+  }
+
+  async likeContent(id) {
+    const result = await this.model.like(id);
+    if (!result) throw new BadRequest("Content not found.");
+    const { _id, likes } = result;
+    return { _id, likes };
+  }
+
+  async dislikeContent(id) {
+    const result = await this.model.dislike(id);
+    if (!result) throw new BadRequest("Content not found.");
+    const { _id, likes } = result;
+    return { _id, likes };
   }
 }
 

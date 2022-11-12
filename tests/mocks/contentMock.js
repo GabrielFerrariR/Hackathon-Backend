@@ -27,6 +27,10 @@ module.exports = [
     link: "https://medium.com/orangejuicefc/qual-o-papel-do-qa-em-uma-equipe-8e8147be28dd",
     track: tracks.fullstack,
     subTrack: subtracks.basics,
+  },
+  {
+    _id: "636ab5b6591b4afd43a66f75",
+    likes: 0
   }
 ];
 
