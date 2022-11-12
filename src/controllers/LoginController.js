@@ -12,8 +12,8 @@ class LoginController {
 
   async create(req, res, _next) {
     const { body } = req;
-    await this.service.validateLogin(body);
-    res.status(StatusCodes.OK).end();
+    const data = await this.service.validateLogin(body);
+    res.status(StatusCodes.OK).json(data);
   }
 }
 
