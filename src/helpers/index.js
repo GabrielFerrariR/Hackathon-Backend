@@ -9,18 +9,18 @@ const getPreviewData = async (link) => {
       },
       timeout: 10000,
     });
+
     const previewData = {
       title: scrapedData.title,
       description: scrapedData.description,
       images: scrapedData.images,
     };
-    console.log(scrapedData);
+
     return previewData;
   } catch (error) {
     console.error(error);
-    return { title: "None",
-      description: "None",
-      images: "None" };
+
+    return { title: "None", description: "None", images: "None" };
   }
 };
 
