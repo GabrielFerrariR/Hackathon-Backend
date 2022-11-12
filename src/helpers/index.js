@@ -1,5 +1,13 @@
 const { getLinkPreview } = require("link-preview-js");
 
+const previewDataErrors = [
+  "Attention Required!", "Error",
+];
+
+const formatString = (str) => (str
+  ? previewDataErrors.reduce((acc, cur) => (str.startsWith(cur) ? "None" : acc), str)
+  : "None");
+
 const getPreviewData = async (link) => {
   try {
     const scrapedData = await getLinkPreview(link, {
@@ -11,8 +19,8 @@ const getPreviewData = async (link) => {
     });
 
     const previewData = {
-      title: scrapedData.title,
-      description: scrapedData.description,
+      title: formatString(scrapedData.title),
+      description: formatString(scrapedData.description),
       images: scrapedData.images,
     };
 
@@ -20,7 +28,7 @@ const getPreviewData = async (link) => {
   } catch (error) {
     console.error(error);
 
-    return { title: "None", description: "None", images: "None" };
+    return { title: "None", description: "None", images: ["None"] };
   }
 };
 
