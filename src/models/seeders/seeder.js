@@ -7,26 +7,15 @@ const { getPreviewData } = require("../../helpers");
 
 const contentModel = new ContentModel();
 
-const seed = async () => {
-  try {
-    await connectToDatabase();
-
-    await contentModel.deleteMany({});
-
-    const contentWithPreview = await Promise.all(data.map(async (content) => {
-      const { link } = content;
-      const previewData = await getPreviewData(link);
-
-      return { ...content, previewData };
-    }));
-
-    await contentModel.insertMany(contentWithPreview);
-
+connectToDatabase()
+  .then(() => contentModel.deleteMany({}))
+  .then(() => Promise.all(
+    data.map((content) => getPreviewData(content.link)
+      .then((previewData) => ({ ...content, previewData }))),
+  ))
+  .then((contentWithPreview) => contentModel.insertMany(contentWithPreview))
+  .then(() => {
     mongoose.connection.close();
-    console.log("seed finished");
-  } catch (error) {
-    console.error(error);
-  }
-};
-
-module.exports = seed;
+    console.log("Seed finished");
+  })
+  .catch((error) => console.error(error));

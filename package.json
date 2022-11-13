@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node .",
     "seed": "node src/models/seeders/seeder.js",
+    "predev": "npm run seed",
     "dev": "nodemon .",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "test": "mocha tests/unit/**/*.test.js --verbose",

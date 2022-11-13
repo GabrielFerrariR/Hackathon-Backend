@@ -4,7 +4,6 @@ const cors = require("cors");
 
 const connectToDatabase = require("./models/connection");
 const errorMiddleWare = require("./middlewares/errorMiddleware");
-const seed = require("./models/seeders/seeder");
 
 class App {
   constructor() {
@@ -15,12 +14,9 @@ class App {
   }
 
   start(port = process.env.PORT) {
-    seed()
-      .then(() => connectToDatabase())
-      .then(() => this.app.listen(
-        port,
-        () => console.log(`Running on port: ${port}`),
-      ))
+    connectToDatabase()
+      .then(() => this.app
+        .listen(port, () => console.log(`Running on port: ${port}`)))
       .catch((error) => {
         console.log("Connection with database generated an error:\r\n");
         console.error(error);
