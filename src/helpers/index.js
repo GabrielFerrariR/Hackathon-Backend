@@ -26,8 +26,6 @@ const getPreviewData = async (link) => {
 
     return previewData;
   } catch (error) {
-    console.error(error);
-
     return { title: "None", description: "None", images: ["None"] };
   }
 };

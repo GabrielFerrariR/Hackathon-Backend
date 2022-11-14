@@ -1,0 +1,10 @@
+module.exports = [{ password: "Pa$$w0rd!",
+  name: "Victoria Nolan",
+  email: "mewadamaj@mailinator.com",
+  isAdmin: false,
+  completedContents: ["6372433aac30c7379c20356e"] },
+{ password: "@dminpassword",
+  name: "Edward Smith",
+  email: "admin@mailinator.com",
+  isAdmin: true,
+  completedContents: ["6372433aac30c7379c20356e"] }];
