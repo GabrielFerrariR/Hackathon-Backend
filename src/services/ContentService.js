@@ -17,7 +17,7 @@ class ContentService extends Service {
   async read(params) {
     const { track, subtrack } = params;
 
-    const result = await this.model.read({ track, subtrack });
+    const result = await this.model.read({ $and: [{ track }, { subTrack: subtrack }] });
 
     return result;
   }
