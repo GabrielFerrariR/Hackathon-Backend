@@ -108,7 +108,6 @@ describe("User controller class", () => {
     beforeEach(async () => {
       req.params = { id: userMockDBResponse._id, contentId: 1 };
       res.status = sinon.stub().returns(res);
-      res.end = sinon.stub().returns(res);
       sinon.stub(controller.service, "toggleCompletedContent").resolves(null);
     });
 

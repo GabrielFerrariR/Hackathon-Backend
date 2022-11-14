@@ -38,11 +38,19 @@ class UserModel extends Model {
   }
 
   async addCompletedContent(userId, contentId) {
-    return this.model.updateOne({ _id: userId }, { $addToSet: { completedContents: contentId } });
+    return this.model.findByIdAndUpdate(
+      userId,
+      { $addToSet: { completedContents: contentId } },
+      { select: { _id: 0, completedContents: 1 }, new: true },
+    );
   }
 
   async removeCompletedContent(userId, contentId) {
-    return this.model.updateOne({ _id: userId }, { $pull: { completedContents: contentId } });
+    return this.model.findByIdAndUpdate(
+      userId,
+      { $pull: { completedContents: contentId } },
+      { select: { _id: 0, completedContents: 1 }, new: true },
+    );
   }
 }
 
