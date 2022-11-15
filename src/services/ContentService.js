@@ -12,6 +12,7 @@ class ContentService extends Service {
 
     this.read = this.read.bind(this);
     this.create = this.create.bind(this);
+    this.update = this.update.bind(this);
   }
 
   async read(params) {
@@ -33,6 +34,17 @@ class ContentService extends Service {
     const result = await this.model.create(content);
 
     return result;
+  }
+
+  async update(id, data) {
+    const { link } = data;
+
+    validateSchema(contentSchema, data);
+
+    const previewData = await getPreviewData(link);
+    const content = { ...data, previewData };
+
+    return this.model.update(id, content);
   }
 
   async likeContent(id) {

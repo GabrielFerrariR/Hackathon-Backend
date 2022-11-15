@@ -19,7 +19,7 @@ describe("Login controller class", () => {
     beforeEach(async () => {
       req.body = loginMockRequest;
       res.status = sinon.stub().returns(res);
-      res.end = sinon.stub().returns(res);
+      res.json = sinon.stub().returns(res);
       sinon.stub(controller.service, "validateLogin").resolves(userMockDBResponse);
     });
 
