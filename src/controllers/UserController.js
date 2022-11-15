@@ -20,9 +20,9 @@ class UserController extends Controller {
   async toggleCompletedContent(req, res, _next) {
     const { id, contentId } = req.params;
 
-    await this.service.toggleCompletedContent(id, contentId);
+    const { completedContents } = await this.service.toggleCompletedContent(id, contentId);
 
-    return res.status(StatusCodes.OK).end();
+    return res.status(StatusCodes.OK).json(completedContents);
   }
 }
 
